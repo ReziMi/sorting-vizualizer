@@ -1,5 +1,10 @@
 let randomize_array = document.getElementById('randomize_array_btn');
-let sort_btn = document.getElementById("sort_btn");
+let bubble_btn = document.getElementById("bubble_btn");
+let insertion_btn = document.getElementById("insertion_btn");
+let selection_btn = document.getElementById("selection_btn");
+let merge_btn = document.getElementById("merge_btn");
+let quick_btn = document.getElementById("quick_btn");
+
 let bars_container = document.getElementById("bars_container");
 let minRange = 1;
 let maxRange = 300; // Adjusted range for better visualization
@@ -57,14 +62,14 @@ async function bubbleSort(array) {
                 bars[j + 1].style.backgroundColor = "lightgreen";
                 await sleep(30); // Allow the color to be visible for 30ms
             }
-            bars[j].style.backgroundColor = "white";
-            bars[j + 1].style.backgroundColor = "white";
+            bars[j].style.backgroundColor = "cyan";
+            bars[j + 1].style.backgroundColor = "cyan";
         }
     }
     return array;
 }
 
-sort_btn.addEventListener("click", async function() {
+bubble_btn.addEventListener("click", async function() {
     await bubbleSort(unsorted_array);
     console.log(unsorted_array);
 });
